@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+      }
+      .app {
+        padding: 100px;
+        border: black solid 3px;
+        background-color: white;
+      }
+      .counter {
+        font-size: 80px;
+        font-weight: bolder;
+      }
+      button{
+        padding: 10px 20px;
+        border: 1px solid black;
+      }
+      button:hover{
+        border: 5px solid gray;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <h1>COUNTER</h1>
+      <div class="counter" id="counter">2</div>
+      <button onclick="increase()">Increase</button>
+      <button onclick="decrease()">Decrease</button>
+    </div>
+    <script>
+      let count = 2;
+      function increase() {
+        count++;
+        document.getElementById("counter").innerText = count;
+      }
+      function decrease() {
+        count--;
+        document.getElementById("counter").innerText = count;
+      }
+    </script>
+  </body>
+</html>
